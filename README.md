@@ -23,7 +23,14 @@ This docker compose is related with my another repository. You can check it out 
 
 - After that, you can running the container using `docker-compose up -d`. Using `-d` to running it using detached mode meaning it will running in the background.
 
-- Finally you can access the web using some of these url. `localhost:8080/auth` to access the web created using nginx. `localhost:5000/auth` to access the app. `localhost:8081` to acess the adminer created using phpMyAdmin. The db using `3306` port, but you can't access it using localhost since database don't send any data.
+- Finally you can access the web using some of these url.
+### Nginx
+```localhost:8080/auth```
+### Python Flask
+```localhost:5000/auth``` to access the app.
+### phpMyAdmin
+```localhost:8081``` to acess the adminer created using phpMyAdmin.
+The db using `3306` port, but you can't access it using localhost since database don't send any data.
 
 ## END
 Thank you for reading. Feel free to fork this project and modify it.
