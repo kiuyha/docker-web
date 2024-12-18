@@ -15,22 +15,65 @@ This docker compose is related with my another repository. You can check it out 
 4. Finally, after the app sucessfuly running, the web which is nginx will be running and created for us to access.
 
 ## Setup
-- You can download this repository by click the `code` button and download zip. If you prefer using git, you can use `git clone https://github.com/kiuyha/docker-web.git`.
+- You can download this repository by click the `code` button and download zip. If you prefer using git, you can use this command
+```
+git clone https://github.com/kiuyha/docker-web.git
+```
 
-- Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use `sudo systemctl start docker` command in terminal.
+- Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
+```
+sudo systemctl start docker
+```
 
-- First build the app using `docker-compose build --no-cache`. The `--no-cache` ensure the docker not using cache because the docker will store cache after you build image, this is for faster up the building time but this is also mean the docker using the older version of the repository. Actually you can add `git pull` in `Dockerfile` but this approach is adding time when building.
+- First build the app using this command
+```
+docker-compose build --no-cache
+```
+The `--no-cache` ensure the docker not using cache because the docker will store cache after you build image, this is for faster up the building time but this is also mean the docker using the older version of the repository. Actually you can add `git pull` in `Dockerfile` but this approach is adding time when building.
 
-- After that, you can running the container using `docker-compose up -d`. Using `-d` to running it using detached mode meaning it will running in the background.
+- After that, you can running the container using this command
+```
+docker-compose up -d
+```
+Using `-d` to running it using detached mode meaning it will running in the background.
 
 - Finally you can access the web using some of these url.
 ### Nginx
-```localhost:8080/auth```
+```
+localhost:8080/auth
+```
 ### Python Flask
-```localhost:5000/auth``` to access the app.
+```
+localhost:5000/auth
+```
 ### phpMyAdmin
-```localhost:8081``` to acess the adminer created using phpMyAdmin.
+```
+localhost:8081
+```
+### Mysql
 The db using `3306` port, but you can't access it using localhost since database don't send any data.
+
+### Some of command for docker.
+- Stopping docker
+```
+docker-compose down
+```
+
+- Inspect running container
+```
+docker-compose ps
+```
+
+- Inspect images
+```
+docker images
+```
+
+- Access bash of container
+```
+docker exec -it <container-id> bash 
+```
+
 
 ## END
 Thank you for reading. Feel free to fork this project and modify it.
