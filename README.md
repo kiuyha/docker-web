@@ -1,11 +1,11 @@
 # Docker Web
 
-This docker compose is related with my another repository. You can check it out in [Study-World](https://github.com/kiuyha/Study-World).
+This docker compose is related with my other repository. You can check it out in [Study-World](https://github.com/kiuyha/Study-World).
 
 ## Features
 - **Using Dockerfile**. It will setup the app using git and pip.
 - **Mysql integration**. The app using Mysql database for saving data.
-- **phpMyAdmin integration**. This ensure that modifying and checking database can be do seemsly.
+- **phpMyAdmin integration**. This ensure that modifying and checking database can be do easly.
 - **Nginx integration**. Nginx can be use to Load Balancing and SSL Termination. It's used by 33.7% of all the website.
 
 ## How It Works?
