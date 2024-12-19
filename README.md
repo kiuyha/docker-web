@@ -19,6 +19,18 @@ This docker compose is related with my other repository. You can check it out in
 ```
 git clone https://github.com/kiuyha/docker-web.git
 ```
+- This program requires to have .env file to be run. Below are the required variables:
+  - `MAIL_USERNAME`: The email that the app will be use.
+  - `MAIL_PASSWORD`: Password of the email.
+  - `SECRET_KEY `: Random string as key fot encryption user data.
+  -  `DATABASE_URL`: mysql+pymysql://app_user:password@db:3306/database.
+  You can also run this command for to have the same thing:
+  ```
+  echo MAIL_USERNAME=your_email_address > .env
+  echo MAIL_PASSWORD=your_email_password >> .env
+  echo SECRET_KEY=your_secret_key >> .env
+  echo DATABASE_URL=your_database_url >> .env
+  ```
 
 - Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
 ```
