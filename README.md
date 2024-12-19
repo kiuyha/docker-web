@@ -15,16 +15,16 @@ This docker compose is related with my other repository. You can check it out in
 4. Finally, after the app sucessfuly running, the web which is nginx will be running and created for us to access.
 
 ## Setup
-- You can download this repository by click the `code` button and download zip. If you prefer using git, you can use this command
+1. You can download this repository by click the `code` button and download zip. If you prefer using git, you can use this command
 ```
 git clone https://github.com/kiuyha/docker-web.git
 ```
-- This program requires to have .env file to be run. Below are the required variables:
+2. This program requires to have .env file to be run. Below are the required variables:
   - `MAIL_USERNAME`: The email that the app will be use.
   - `MAIL_PASSWORD`: Password of the email.
-  - `SECRET_KEY `: Random string as key fot encryption user data.
+  - `SECRET_KEY `: Random string as key for encryption user's data.
   -  `DATABASE_URL`: mysql+pymysql://app_user:password@db:3306/database.
-- You can also run this command for to have the same thing:
+  You can also run this command for to have the same thing:
   ```
   echo MAIL_USERNAME=your_email_address > .env
   echo MAIL_PASSWORD=your_email_password >> .env
@@ -32,24 +32,24 @@ git clone https://github.com/kiuyha/docker-web.git
   echo DATABASE_URL=your_database_url >> .env
   ```
 
-- Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
+3. Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
 ```
 sudo systemctl start docker
 ```
 
-- First build the app using this command
+4. First build the app using this command
 ```
 docker-compose build --no-cache
 ```
 The `--no-cache` ensure the docker not using cache because the docker will store cache after you build image, this is for faster up the building time but this is also mean the docker using the older version of the repository. Actually you can add `git pull` in `Dockerfile` but this approach is adding time when building.
 
-- After that, you can running the container using this command
+5. After that, you can running the container using this command
 ```
 docker-compose up -d
 ```
 Using `-d` to running it using detached mode meaning it will running in the background.
 
-- Finally you can access the web using some of these url.
+6. Finally you can access the web using some of these url.
 ### Nginx
 ```
 localhost:8080/auth
