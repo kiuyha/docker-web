@@ -24,12 +24,12 @@ git clone https://github.com/kiuyha/docker-web.git
   - `MAIL_PASSWORD`: Password of the email.
   - `SECRET_KEY `: Random string as key for encryption user's data.
   -  `DATABASE_URL`: mysql+pymysql://app_user:password@db:3306/database.
-  You can also run this command for to have the same thing:
+You can also run this command for to have the same thing:
   ```
   echo MAIL_USERNAME=your_email_address > .env
   echo MAIL_PASSWORD=your_email_password >> .env
   echo SECRET_KEY=your_secret_key >> .env
-  echo DATABASE_URL=your_database_url >> .env
+  echo DATABASE_URL=mysql+pymysql://app_user:password@db:3306/database >> .env
   ```
 
 3. Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
