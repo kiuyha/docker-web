@@ -24,13 +24,15 @@ git clone https://github.com/kiuyha/docker-web.git
   - `MAIL_PASSWORD`: Password of the email.
   - `SECRET_KEY `: Random string as key for encryption user's data.
   -  `DATABASE_URL`: mysql+pymysql://app_user:password@db:3306/database.
-You can also run this command for to have the same thing:
+  You can also run this command for to have the same thing:
   ```
   echo MAIL_USERNAME=your_email_address > .env
   echo MAIL_PASSWORD=your_email_password >> .env
   echo SECRET_KEY=your_secret_key >> .env
   echo DATABASE_URL=mysql+pymysql://app_user:password@db:3306/database >> .env
   ```
+  **NOTE**: if you run that command in powershell or CMD the .env file might be using the UTF-16, which not
+  supported by the python code. You can change it in vscode though.
 
 3. Ensure you running your docker engine. In windows and MacOS, you can just open the `docker desktop` app. If you using linux, you can use this command in terminal
 ```
