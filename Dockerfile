@@ -12,6 +12,12 @@ COPY ./.env /app/Study-World/website/.env
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN flask db init
+
+RUN flask db migrate
+
+RUN flask db upgrade
+
 EXPOSE 5000
 
 CMD ["python","main.py"]
